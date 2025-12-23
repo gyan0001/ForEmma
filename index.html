@@ -8,6 +8,7 @@
     <style>
         :root {
             --primary: #2c2c2c;
+            color-scheme: light only;
             --secondary: #fafafa;
             --accent: #ff6b9d;
             --accent-light: #ffb3c9;
@@ -15,6 +16,17 @@
             --text-light: #707070;
             --border: #e8e8e8;
             --green-accent: #7bc96f;
+        }
+
+        /* Force light mode - prevent dark mode interference */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                color-scheme: light;
+            }
+            body {
+                background: var(--secondary) !important;
+                color: var(--primary) !important;
+            }
         }
 
         * {
@@ -1428,11 +1440,11 @@
         </p>
         <div class="social-links">
             <a href="https://www.instagram.com/emmakatja_/" target="_blank" class="social-link" title="Instagram">📷</a>
-            <a href="mailto:hello@emmakatja.com" class="social-link" title="Email">✉️</a>
+            <a href="/cdn-cgi/l/email-protection#7d15181111123d1810101c161c09171c531e1210" class="social-link" title="Email">✉️</a>
             <a href="#" class="social-link" title="TikTok">🎵</a>
             <a href="#" class="social-link" title="YouTube">🎬</a>
         </div>
-        <a href="mailto:hello@emmakatja.com" class="contact-button">Get In Touch</a>
+        <a href="/cdn-cgi/l/email-protection#2e464b4242416e4b43434f454f5a444f004d4143" class="contact-button">Get In Touch</a>
     </section>
 
     <!-- Footer -->
@@ -1440,7 +1452,7 @@
         <p>&copy; 2024 Emma Katja. All Rights Reserved. | Follow <a href="https://www.instagram.com/emmakatja_/" target="_blank">@emmakatja_</a> on Instagram ✨</p>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Navbar scroll effect
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
@@ -1514,10 +1526,4 @@
             item.addEventListener('mouseenter', function() {
                 this.querySelector('.stat-number').style.transform = 'scale(1.1)';
             });
-            item.addEventListener('mouseleave', function() {
-                this.querySelector('.stat-number').style.transform = 'scale(1)';
-            });
-        });
-    </script>
-</body>
-</html>
+            i
