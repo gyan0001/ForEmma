@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="color-scheme: light;">
+<html lang="en" style="color-scheme: light !important; background: #fafafa !important;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +8,25 @@
     <title>Emma Katja - Content Creator & Lifestyle Influencer</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Lora:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
+        /* CRITICAL DARK MODE PROTECTION */
+        html { color-scheme: light only !important; background: #fafafa !important; }
+        body { color-scheme: light only !important; background: #fafafa !important; }
+        @media (prefers-color-scheme: dark) {
+            html, body { color-scheme: light !important; background: #fafafa !important; color: #2c2c2c !important; filter: none !important; }
+            * { color-scheme: light !important; }
+            nav { background: linear-gradient(180deg, rgba(250, 250, 250, 0.98) 0%, rgba(250, 250, 250, 0) 100%) !important; }
+            nav.scrolled { background: rgba(250, 250, 250, 0.96) !important; }
+            .hero { background: linear-gradient(135deg, #fafafa 0%, #fff5f8 100%) !important; }
+            .about { background: #fafafa !important; }
+            .video-section { background: linear-gradient(180deg, #ffffff 0%, #fff5f8 100%) !important; }
+            .gallery { background: #fafafa !important; }
+            .stat-item, .image-badge { background: white !important; }
+            .social-link { background: white !important; }
+            .contact { background: linear-gradient(135deg, #ff6b9d 0%, #e5527d 100%) !important; }
+            footer { background: #2c2c2c !important; }
+        }
+
         :root {
-            color-scheme: light only !important;
-            -webkit-color-scheme: light !important;
             --primary: #2c2c2c;
             --secondary: #fafafa;
             --accent: #ff6b9d;
@@ -20,63 +36,6 @@
             --border: #e8e8e8;
             --green-accent: #7bc96f;
         }
-        /* CRITICAL: Force light mode - Override dark mode */
-        @media (prefers-color-scheme: dark) {
-            :root {
-                color-scheme: light !important;
-                -webkit-color-scheme: light !important;
-            }
-            
-            html {
-                background: #fafafa !important;
-                color: #2c2c2c !important;
-                color-scheme: light !important;
-            }
-            
-            body {
-                background: #fafafa !important;
-                color: #2c2c2c !important;
-                color-scheme: light !important;
-            }
-            
-            nav {
-                background: linear-gradient(180deg, rgba(250, 250, 250, 0.98) 0%, rgba(250, 250, 250, 0) 100%) !important;
-            }
-            
-            nav.scrolled {
-                background: rgba(250, 250, 250, 0.96) !important;
-            }
-            
-            .hero {
-                background: linear-gradient(135deg, #fafafa 0%, #fff5f8 100%) !important;
-            }
-            
-            .video-section {
-                background: linear-gradient(180deg, #ffffff 0%, #fff5f8 100%) !important;
-            }
-            
-            .stat-item {
-                background: white !important;
-            }
-            
-            .image-badge {
-                background: white !important;
-            }
-            
-            .social-link {
-                background: white !important;
-            }
-            
-            .contact {
-                background: linear-gradient(135deg, #ff6b9d 0%, #e5527d 100%) !important;
-            }
-            
-            footer {
-                background: #2c2c2c !important;
-            }
-        }
-
-
 
         * {
             margin: 0;
@@ -85,7 +44,6 @@
         }
 
         body {
-            color-scheme: light only !important;
             font-family: 'Poppins', sans-serif;
             color: var(--primary);
             background: var(--secondary);
@@ -93,7 +51,6 @@
         }
 
         html {
-            color-scheme: light only !important;
             scroll-behavior: smooth;
         }
 
@@ -1291,7 +1248,7 @@
         }
     </style>
 </head>
-<body>
+<body style="background: #fafafa !important; color: #2c2c2c !important;">
     <!-- Navigation -->
     <nav id="navbar">
         <div class="logo">EMMA<span>KATJA</span></div>
@@ -1491,11 +1448,11 @@
         </p>
         <div class="social-links">
             <a href="https://www.instagram.com/emmakatja_/" target="_blank" class="social-link" title="Instagram">📷</a>
-            <a href="/cdn-cgi/l/email-protection#86eee3eaeae9c6e3ebebe7ede7f2ece7a8e5e9eb" class="social-link" title="Email">✉️</a>
+            <a href="/cdn-cgi/l/email-protection#345c5158585b74515959555f55405e551a575b59" class="social-link" title="Email">✉️</a>
             <a href="#" class="social-link" title="TikTok">🎵</a>
             <a href="#" class="social-link" title="YouTube">🎬</a>
         </div>
-        <a href="/cdn-cgi/l/email-protection#f9919c959596b99c94949892988d9398d79a9694" class="contact-button">Get In Touch</a>
+        <a href="/cdn-cgi/l/email-protection#1078757c7c7f50757d7d717b71647a713e737f7d" class="contact-button">Get In Touch</a>
     </section>
 
     <!-- Footer -->
@@ -1577,4 +1534,10 @@
             item.addEventListener('mouseenter', function() {
                 this.querySelector('.stat-number').style.transform = 'scale(1.1)';
             });
-            i
+            i            item.addEventListener('mouseleave', function() {
+                this.querySelector('.stat-number').style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
