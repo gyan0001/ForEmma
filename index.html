@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="color-scheme: light;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only">
+    <meta name="supported-color-schemes" content="light">
     <title>Emma Katja - Content Creator & Lifestyle Influencer</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Lora:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
+            color-scheme: light only !important;
+            -webkit-color-scheme: light !important;
             --primary: #2c2c2c;
             --secondary: #fafafa;
             --accent: #ff6b9d;
@@ -16,6 +20,63 @@
             --border: #e8e8e8;
             --green-accent: #7bc96f;
         }
+        /* CRITICAL: Force light mode - Override dark mode */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                color-scheme: light !important;
+                -webkit-color-scheme: light !important;
+            }
+            
+            html {
+                background: #fafafa !important;
+                color: #2c2c2c !important;
+                color-scheme: light !important;
+            }
+            
+            body {
+                background: #fafafa !important;
+                color: #2c2c2c !important;
+                color-scheme: light !important;
+            }
+            
+            nav {
+                background: linear-gradient(180deg, rgba(250, 250, 250, 0.98) 0%, rgba(250, 250, 250, 0) 100%) !important;
+            }
+            
+            nav.scrolled {
+                background: rgba(250, 250, 250, 0.96) !important;
+            }
+            
+            .hero {
+                background: linear-gradient(135deg, #fafafa 0%, #fff5f8 100%) !important;
+            }
+            
+            .video-section {
+                background: linear-gradient(180deg, #ffffff 0%, #fff5f8 100%) !important;
+            }
+            
+            .stat-item {
+                background: white !important;
+            }
+            
+            .image-badge {
+                background: white !important;
+            }
+            
+            .social-link {
+                background: white !important;
+            }
+            
+            .contact {
+                background: linear-gradient(135deg, #ff6b9d 0%, #e5527d 100%) !important;
+            }
+            
+            footer {
+                background: #2c2c2c !important;
+            }
+        }
+
+
 
         * {
             margin: 0;
@@ -24,6 +85,7 @@
         }
 
         body {
+            color-scheme: light only !important;
             font-family: 'Poppins', sans-serif;
             color: var(--primary);
             background: var(--secondary);
@@ -31,6 +93,7 @@
         }
 
         html {
+            color-scheme: light only !important;
             scroll-behavior: smooth;
         }
 
@@ -1428,11 +1491,11 @@
         </p>
         <div class="social-links">
             <a href="https://www.instagram.com/emmakatja_/" target="_blank" class="social-link" title="Instagram">📷</a>
-            <a href="mailto:hello@emmakatja.com" class="social-link" title="Email">✉️</a>
+            <a href="/cdn-cgi/l/email-protection#86eee3eaeae9c6e3ebebe7ede7f2ece7a8e5e9eb" class="social-link" title="Email">✉️</a>
             <a href="#" class="social-link" title="TikTok">🎵</a>
             <a href="#" class="social-link" title="YouTube">🎬</a>
         </div>
-        <a href="mailto:hello@emmakatja.com" class="contact-button">Get In Touch</a>
+        <a href="/cdn-cgi/l/email-protection#f9919c959596b99c94949892988d9398d79a9694" class="contact-button">Get In Touch</a>
     </section>
 
     <!-- Footer -->
@@ -1440,7 +1503,7 @@
         <p>&copy; 2024 Emma Katja. All Rights Reserved. | Follow <a href="https://www.instagram.com/emmakatja_/" target="_blank">@emmakatja_</a> on Instagram ✨</p>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Navbar scroll effect
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
@@ -1514,10 +1577,4 @@
             item.addEventListener('mouseenter', function() {
                 this.querySelector('.stat-number').style.transform = 'scale(1.1)';
             });
-            item.addEventListener('mouseleave', function() {
-                this.querySelector('.stat-number').style.transform = 'scale(1)';
-            });
-        });
-    </script>
-</body>
-</html>
+            i
